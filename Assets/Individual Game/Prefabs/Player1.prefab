@@ -547,6 +547,7 @@ MonoBehaviour:
   <InputReader>k__BackingField: {fileID: 3363833438442770477}
   <Controller>k__BackingField: {fileID: 7673035949928601888}
   <FreeLookMovementSpeed>k__BackingField: 6
+  <Animator>k__BackingField: {fileID: 1959193858369775472}
 --- !u!95 &1959193858369775472
 Animator:
   serializedVersion: 5
