@@ -15,9 +15,14 @@ public class PlayerTestState : PlayerBaseState
 
     public override void Tick(float deltaTime)
     {
+        Vector3 movement = new Vector3();
+        movement.x = stateMachine.InputReader.MovementValue.x;
+        movement.z = stateMachine.InputReader.MovementValue.y;
+        movement.y = 0;
+        stateMachine.transform.Translate(movement * deltaTime);
 
 
-        Debug.Log(stateMachine.InputReader.MovementValue);
+        
 
         
     }
