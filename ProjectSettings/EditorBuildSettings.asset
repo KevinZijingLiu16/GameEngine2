@@ -9,9 +9,9 @@ EditorBuildSettings:
     path: Assets/Individual Game/Scenes/PlayScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
-    path: Assets/Demo/FastProto/Scene/OpenChestScene.unity
+    path: Assets/Jamk_Demo_Task/FastProto/Scene/OpenChestScene.unity
     guid: e3b2ad27511392840b2aae0d2edc4e4e
   - enabled: 1
-    path: Assets/Demo/FastProto/Scene/DemoPlayScene.unity
+    path: Assets/Jamk_Demo_Task/FastProto/Scene/DemoPlayScene.unity
     guid: b33a4daf61c0f8546bddd4edf9092d91
   m_configObjects: {}
