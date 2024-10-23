@@ -7,8 +7,15 @@ public class ForceReceiver : MonoBehaviour
     [SerializeField] private CharacterController controller;
 
     private float verticalVelocity;
+    private Vector3 impact;
+    private Vector3 dampingVelocity;
 
-    public Vector3 Movement => Vector3.up * verticalVelocity; //=> is return
+    [SerializeField] private float drag = 0.3f;
+
+    public Vector3 Movement => impact + Vector3.up * verticalVelocity; //=> is return
+
+
+   
 
     private void Update()
     {
@@ -20,6 +27,14 @@ public class ForceReceiver : MonoBehaviour
         {
             verticalVelocity += Physics.gravity.y * Time.deltaTime; //using + is because gravity is negative
         }
+
+        impact = Vector3.SmoothDamp(impact, Vector3.zero, ref dampingVelocity, drag );
+    }
+
+    public void AddForce(Vector3 force)
+    {
+        impact += force;
+
     }
 
 }
