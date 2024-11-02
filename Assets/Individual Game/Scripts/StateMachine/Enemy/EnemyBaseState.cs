@@ -27,4 +27,13 @@ public abstract class EnemyBaseState : State
         return playerDistanceSqr <= stateMachine.PlayerChasingRange * stateMachine.PlayerChasingRange; // Returns true if the player is in the chase range
     }
 
+    protected void FaceToPlayer() // Makes the enemy face the player
+    {
+        if (stateMachine.Player == null) { return; }
+        Vector3 lookPos = stateMachine.Player.transform.position - stateMachine.transform.position;
+
+        lookPos.y = 0; //dont care about y axis
+        stateMachine.transform.rotation = Quaternion.LookRotation(lookPos);
+    }
+
 }
