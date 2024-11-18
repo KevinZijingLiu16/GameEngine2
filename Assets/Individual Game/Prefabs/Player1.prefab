@@ -566,6 +566,7 @@ MonoBehaviour:
     <ForceTime>k__BackingField: 0.35
     <Force>k__BackingField: 15
     <Damage>k__BackingField: 10
+    <Knockback>k__BackingField: 10
   - <AnimationName>k__BackingField: Attack2
     <TransitionDuration>k__BackingField: 0.1
     <ComboStateIndex>k__BackingField: 2
@@ -573,6 +574,7 @@ MonoBehaviour:
     <ForceTime>k__BackingField: 0.35
     <Force>k__BackingField: 15
     <Damage>k__BackingField: 15
+    <Knockback>k__BackingField: 15
   - <AnimationName>k__BackingField: Attack3
     <TransitionDuration>k__BackingField: 0.2
     <ComboStateIndex>k__BackingField: -1
@@ -580,6 +582,7 @@ MonoBehaviour:
     <ForceTime>k__BackingField: 0.35
     <Force>k__BackingField: 20
     <Damage>k__BackingField: 20
+    <Knockback>k__BackingField: 25
 --- !u!95 &1959193858369775472
 Animator:
   serializedVersion: 5
@@ -641,6 +644,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 7673035949928601888}
   drag: 0.1
+  agent: {fileID: 0}
 --- !u!114 &7869854196625266416
 MonoBehaviour:
   m_ObjectHideFlags: 0
