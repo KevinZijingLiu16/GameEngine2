@@ -1403,6 +1403,7 @@ MonoBehaviour:
   <Weapon>k__BackingField: {fileID: 3416869001099114904}
   <AttackDamage>k__BackingField: 20
   <AttackKnockback>k__BackingField: 20
+  <Health>k__BackingField: {fileID: 1624012513158244014}
 --- !u!114 &7468917970510029112
 MonoBehaviour:
   m_ObjectHideFlags: 0

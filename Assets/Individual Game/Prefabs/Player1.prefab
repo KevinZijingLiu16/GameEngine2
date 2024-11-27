@@ -583,6 +583,7 @@ MonoBehaviour:
     <Force>k__BackingField: 20
     <Damage>k__BackingField: 20
     <Knockback>k__BackingField: 25
+  <Health>k__BackingField: {fileID: 4157975656597836095}
 --- !u!95 &1959193858369775472
 Animator:
   serializedVersion: 5

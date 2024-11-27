@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -26,6 +27,8 @@ public class EnemyStateMachine : StateMachine
 
     [field: SerializeField] public float AttackKnockback { get; private set; }
 
+    [field: SerializeField] public Health Health { get; private set; }
+
     private void Start()
     {
 
@@ -35,6 +38,21 @@ public class EnemyStateMachine : StateMachine
         Agent.updateRotation = false;
 
         SwitchState(new EnemyIdleState(this));
+    }
+
+    private void OnEnable()
+    {
+        Health.OnTakeDamage += HandleTakeDamage;
+    }
+
+    private void HandleTakeDamage()
+    {
+        SwitchState(new EnemyImpactState(this));
+    }
+
+    private void OnDisable()
+    {
+        Health.OnTakeDamage -= HandleTakeDamage;
     }
 
     private void OnDrawGizmos()

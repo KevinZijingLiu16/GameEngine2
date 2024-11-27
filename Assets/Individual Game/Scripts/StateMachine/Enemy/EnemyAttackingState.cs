@@ -19,7 +19,7 @@ public class EnemyAttackingState : EnemyBaseState
     {
         if(GetNormalizedTime(stateMachine.Animator) > 0.9f) // attack animation is about to finish
         {
-            Debug.Log("Attack to chase");
+           // Debug.Log("Attack to chase");
             stateMachine.SwitchState(new EnemyChasingState(stateMachine));
         }
         

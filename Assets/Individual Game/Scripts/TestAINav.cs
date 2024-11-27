@@ -17,5 +17,9 @@ public class TestAINav : MonoBehaviour
         {
             agent.SetDestination(target.position);  
         }
+        else
+        {
+            Debug.LogWarning("Agent is not on NavMesh!");
+        }
     }
 }
