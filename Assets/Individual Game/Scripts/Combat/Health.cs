@@ -10,6 +10,8 @@ public class Health : MonoBehaviour
 
     public event Action OnTakeDamage;
 
+    public event Action OnDie;
+
 
 
     // Start is called before the first frame update
@@ -29,6 +31,11 @@ public class Health : MonoBehaviour
         health = Mathf.Max(health - damage, 0); //mathf.max is used to prevent health from going below 0 by return the largest value between 0 and health - damage
 
         OnTakeDamage?.Invoke();
+
+        if (health == 0)
+        {
+            OnDie?.Invoke();
+        }
 
         Debug.Log("Health: " + health);
     }
